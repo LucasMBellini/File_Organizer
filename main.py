@@ -14,6 +14,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.setWindowIcon(appIcon)
         self.file = ''
         self.open_button.clicked.connect(self.open_path)
+        self.start_button.clicked.connect(self.organizer)
 
     def open_path(self):
         self.file = QFileDialog.getExistingDirectory(self, str("pasta xml"),
@@ -23,6 +24,26 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.txt_path.setText(self.file)
         self.file = str(self.file)
         
+    def organizer(self):
+        
+        path = self.file
+        files = os.listdir(path)
+        
+        for file in files:
+            filename, extension = os.path.splitext(file)
+            extension = extension[1:]
+            if os.path.exists(path + '/' + extension):
+                shutil.move(path + '/' +file, path + '/' + extension + '/' + file)
+            else:
+                os.makedirs(path +  '/' + extension)
+                shutil.move(path + '/' + file, path + '/' + extension)
+                
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Information)
+        msg.setText('Arquivos Organizados!')
+        msg.exec_()
+                
+    
 if __name__ == '__main__':
     
     app = QApplication(sys.argv)
