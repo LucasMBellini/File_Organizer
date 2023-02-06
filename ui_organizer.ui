@@ -51,7 +51,7 @@
         </widget>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <layout class="QHBoxLayout" name="search_box">
          <item>
           <widget class="QLineEdit" name="txt_path">
            <property name="minimumSize">
@@ -98,7 +98,7 @@ background-color: rgb(0, 157, 235);}
         </layout>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout">
+        <layout class="QHBoxLayout" name="start_box">
          <item>
           <widget class="QLabel" name="label_2">
            <property name="text">

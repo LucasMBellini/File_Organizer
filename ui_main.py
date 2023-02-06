@@ -110,7 +110,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:10pt;\"><img src=\"_img/sigma.png\"/></span></p><p align=\"center\"><span style=\" font-size:14pt; font-weight:600; color:#3d3da7;\">FILE ORGANIZE</span></p></body></html>", None))
+        self.label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:10pt;\"><img src=\"./img/icon.png\"/></span></p><p align=\"center\"><span style=\" font-size:14pt; font-weight:600; color:#3d3da7;\">FILE ORGANIZE</span></p></body></html>", None))
         self.txt_path.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Selecione a pasta", None))
         self.open_button.setText(QCoreApplication.translate("MainWindow", u"Open", None))
         self.label_2.setText("")
